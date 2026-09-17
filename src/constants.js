@@ -1,4 +1,5 @@
 // Single source of truth for status values and legal transitions.
+
 export const STATUSES = ['pending', 'running', 'completed', 'failed'];
 
 // key = current status, value = statuses it may move to
