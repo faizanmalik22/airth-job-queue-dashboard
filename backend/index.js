@@ -14,6 +14,12 @@ app.use(express.json());
 
 app.use('/jobs',server)
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Airth Job Queue Dashboard API is running"
+  });
+});
+
 mongoose.connect(MONGODB_URL)
   .then(() => {
     app.listen(port, () => {
